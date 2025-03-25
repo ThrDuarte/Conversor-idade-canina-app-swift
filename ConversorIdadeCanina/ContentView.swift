@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var idadeh: String = ""
+    @State private var idade: String = ""
     @State private var idadehcanina: String = ""
     @State private var erro: Bool = false
     
     func CalcularIdade(){
         erro = false
-        if let idade = Int(idadeh), idade>0{
+        if let idade = Int(idade), idade>0{
             erro = true
             let resultado = idade * 7
             idadehcanina = "\(resultado) anos"
@@ -36,7 +36,7 @@ struct ContentView: View {
                 .fontWeight(.light)
                 .foregroundColor(.pink)
             TextField("Digite a idade humana",
-                      text: $idadeh)
+                      text: $idade)
             .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
             .cornerRadius(/*@START_MENU_TOKEN@*/9.0/*@END_MENU_TOKEN@*/)
             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
